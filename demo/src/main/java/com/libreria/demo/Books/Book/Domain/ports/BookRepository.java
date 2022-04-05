@@ -8,6 +8,7 @@ import java.util.List;
 
 public interface BookRepository {
     public void save(Book book);
-    public List<Book> list(Author author);
+    public List<Book> list(String name);
     public Book details(String name);
+    public List<Book> all();
 }

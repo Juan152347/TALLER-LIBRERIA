@@ -12,6 +12,10 @@ import com.libreria.demo.Books.author.Domain.Author;
 public class BookCreate {
     private BookRepository bookrepository;
 
+    public BookCreate(BookRepository bookrepository) {
+        this.bookrepository = bookrepository;
+    }
+
     public void execute(String description, double price, String title, int year, String name, String lastname){
         descriptionBook Description = new descriptionBook(description);
         priceBook Price = new priceBook(price);
