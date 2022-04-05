@@ -1,27 +1,30 @@
 package com.libreria.demo.Books.author.Domain;
 
 public class Author {
-    private String nombre;
-    private String apellido;
+    private String name;
+    private String lastname;
 
     public Author(String nombre, String apellido) {
-        this.nombre = nombre;
-        this.apellido = apellido;
+        this.name = nombre;
+        this.lastname = apellido;
     }
 
     public String getNombre() {
-        return nombre;
+        return name;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        this.name = nombre;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+    public String toString() {
+        return this.name + " " + this.lastname;
     }
 }
