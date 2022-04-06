@@ -7,6 +7,8 @@ import com.libreria.demo.Books.Book.Domain.ValueObjects.yearBook;
 import com.libreria.demo.Books.Book.Domain.ports.BookRepository;
 import com.libreria.demo.Books.Book.Domain.Book;
 import com.libreria.demo.Books.author.Domain.Author;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 
 public class BookCreate {
@@ -17,6 +19,7 @@ public class BookCreate {
     }
 
     public void execute(String description, double price, String title, int year, String name, String lastname){
+        System.out.println("Entra");
         descriptionBook Description = new descriptionBook(description);
         priceBook Price = new priceBook(price);
         TitleBook Title = new TitleBook(title);

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="inMemoryUserRepository" class="com.libreria.demo.Books.Book.Infrastructure.Adapters.inMemoryUserRepository"
+        scope="singleton"/>
+
+    <bean id="BookCreate" class="com.libreria.demo.Books.Book.Application.create.BookCreate">
+        <constructor-arg ref="inMemoryUserRepository"/>
+    </bean>
+    <bean id="bookSearch" class="com.libreria.demo.Books.Book.Application.search.bookSearch">
+        <constructor-arg ref="inMemoryUserRepository"/>
+    </bean>
+</beans>

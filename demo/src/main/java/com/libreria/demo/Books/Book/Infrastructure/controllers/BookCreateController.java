@@ -1,6 +1,8 @@
 package com.libreria.demo.Books.Book.Infrastructure.controllers;
 
+
 import com.libreria.demo.Books.Book.Application.create.BookCreate;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -10,10 +12,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(value = "/Book")
 public class BookCreateController {
-
-    @Autowired
+    @Autowired(required = false)
     private BookCreate creator;
-
 
     @PostMapping(value = "/create")
     public ResponseEntity execute(@RequestBody BookCreatorRequest request ){
