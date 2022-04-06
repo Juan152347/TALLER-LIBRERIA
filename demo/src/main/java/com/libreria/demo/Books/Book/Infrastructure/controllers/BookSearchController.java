@@ -15,8 +15,7 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/Book")
 public class BookSearchController {
-
-    @Autowired
+    @Autowired(required = false)
     private bookSearch all;
 
     @GetMapping(value = "/all")
